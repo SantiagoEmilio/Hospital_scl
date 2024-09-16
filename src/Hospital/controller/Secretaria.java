@@ -1,4 +1,4 @@
-package controller;
+package Hospital.controller;
 
 public class Secretaria {
 }
