@@ -1,16 +1,16 @@
+
+import Hospital.controller.LoginController;
+import Hospital.view.LoginView;
+
 import javax.swing.*;
-import view.LoginView;
-import controller.LoginController;
+import java.awt.*;
 
-public class Main {
-
+public class Main extends JFrame {
     public static void main(String[] args) {
-        // Crear la vista del login
+        // Crear la ventana de login
         LoginView loginView = new LoginView();
-        // Crear el controlador y pasarle la vista
-        LoginController loginController = new LoginController(loginView);
+        LoginController controllerLogin = new LoginController(loginView);
 
-        // Mostrar la ventana de login
-        loginView.setVisible(true);
+
     }
 }
