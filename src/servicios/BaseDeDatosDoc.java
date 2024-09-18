@@ -13,7 +13,7 @@ public class BaseDeDatosDoc {
         doctores.add(new Doctor("Carlos", "103", "9012", "Pediatría"));
     }
 
-    public obtenerDoctor(String usuario) {
+    public ObtenerDoctor(String usuario) {
         for (Doctor doctor : doctores) {
             if (doctor.getNombre().equals(usuario)) {
                 return doctor;

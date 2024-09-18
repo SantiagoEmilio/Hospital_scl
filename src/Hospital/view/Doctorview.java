@@ -16,7 +16,7 @@ public class Doctorview extends JFrame {
         headerPanel.setBackground(Color.darkGray);
         headerPanel.setLayout(new BorderLayout());
 
-        JLabel nameHospital = new JLabel("Hospital santa Catalina");
+        JLabel nameHospital = new JLabel("Hospital Santa catalina");
         nameHospital.setForeground(Color.WHITE);
         //Le decimos a nameHospital que se ubique al este de headerPanel
         headerPanel.add(nameHospital, BorderLayout.WEST);
