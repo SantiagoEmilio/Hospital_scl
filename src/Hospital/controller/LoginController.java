@@ -27,7 +27,7 @@ public class LoginController {
         } else {
             System.out.println("Información del doctor:");
             System.out.println("Nombre: " + datosDoc.get("Nombre"));
-            System.out.println("Número de Doctor: " + datosDoc.get("Usuario")); // Cambiado a "Usuario" según la implementación de BackEnde
+            System.out.println("Número de Doctor: " + datosDoc.get("Usuario")); // Cambiado a "Usuario" según la implementación de BackEnd
             System.out.println("Especialidad: " + datosDoc.get("Especialidad"));
         }
     }
