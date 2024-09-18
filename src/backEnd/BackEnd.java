@@ -13,12 +13,12 @@ public class BackEnd {
         baseDeDatosDoc = new BaseDeDatosDoc();
     }
 
-    public HashMap<String, String> validarDatos(String usuario, String contraseña){
+    public HashMap<String, String> validarDatos(String usuario, String contrasena){
 
         HashMap<String, String> respuesta = new HashMap<>();
-        Doctor doctor = baseDeDatosDoc.obtenerDoctor(usuario);
+        Doctor.doctor = baseDeDatosDoc.obtenerDoctor(usuario);
 
-        if (doctor != null && doctor.getContraseña().equals(contraseña)) {
+        if (doctor != null && doctor.getContrasena().equals(contrasena)) {
             respuesta.put("Nombre", doctor.getNombre());
             respuesta.put("Usuario", doctor.getNoDeDoctor());
             respuesta.put("Especialidad", doctor.getEspecialidad());
