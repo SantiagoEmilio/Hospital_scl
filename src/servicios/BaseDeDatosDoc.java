@@ -1,4 +1,4 @@
-package Hospital.servicios;
+package servicios;
 
 import java.util.ArrayList;
 
@@ -8,9 +8,9 @@ public class BaseDeDatosDoc {
     public BaseDeDatosDoc() {
         doctores = new ArrayList<>();
         // Agregar algunos doctores por defecto con número de doctor en lugar de usuario
-        doctores.add(new Doctor("Juan", "101", "password123", "Cardiología"));
-        doctores.add(new Doctor("María", "102", "password456", "Neurología"));
-        doctores.add(new Doctor("Carlos", "103", "password789", "Pediatría"));
+        doctores.add(new Doctor("Juan", "101", "1234", "Cardiología"));
+        doctores.add(new Doctor("María", "102", "5678", "Neurología"));
+        doctores.add(new Doctor("Carlos", "103", "9012", "Pediatría"));
     }
 
     public Doctor obtenerDoctor(String usuario) {

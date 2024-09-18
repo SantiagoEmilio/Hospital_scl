@@ -1,7 +1,7 @@
-package Hospital.backEnd;
+package backEnd;
 
-import Hospital.servicios.BaseDeDatosDoc;
-import Hospital.servicios.Doctor;
+import servicios.BaseDeDatosDoc;
+import servicios.Doctor;
 
 import java.util.HashMap;
 
@@ -13,12 +13,12 @@ public class BackEnd {
         baseDeDatosDoc = new BaseDeDatosDoc();
     }
 
-    public HashMap<String, String> validarDatos(String usuario, String contrasenna){
+    public HashMap<String, String> validarDatos(String usuario, String contraseña){
 
         HashMap<String, String> respuesta = new HashMap<>();
         Doctor doctor = baseDeDatosDoc.obtenerDoctor(usuario);
 
-        if (doctor != null && doctor.getContraseña().equals(contrasenna)) {
+        if (doctor != null && doctor.getContraseña().equals(contraseña)) {
             respuesta.put("Nombre", doctor.getNombre());
             respuesta.put("Usuario", doctor.getNoDeDoctor());
             respuesta.put("Especialidad", doctor.getEspecialidad());

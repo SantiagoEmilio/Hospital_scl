@@ -1,4 +1,6 @@
-package Hospital.servicios;
+package servicios;
+
+import java.util.HashMap;
 
 public class Doctor {
     private String usuario;

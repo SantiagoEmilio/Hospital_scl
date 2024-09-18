@@ -5,20 +5,18 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class LoginView extends JFrame{
-
     private JTextField userTextField;
     private JPasswordField passwordField;
     private JButton loginButton;
 
     public LoginView() {
-
-        setTitle("Login");
+        setTitle("Login selp");
         setSize(900, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null); // Centra la ventana en la pantalla
 
+        // Panel principal con GridLayout de 1 fila y 2 columnas
         JPanel mainPanel = new JPanel(new GridLayout(1, 2));
-
 
         JPanel rightPanel = new JPanel();
         rightPanel.setBackground(Color.WHITE);
@@ -26,9 +24,10 @@ public class LoginView extends JFrame{
 
         JLabel userLabel = new JLabel("Usuario:");
         JLabel passwordLabel = new JLabel("Contraseña:");
-        JTextField userTextField = new JTextField(15);
-        JPasswordField passwordField = new JPasswordField(15);
-        JButton loginButton = new JButton("Iniciar sesión");
+
+        userTextField = new JTextField(15);
+        passwordField = new JPasswordField(15);
+        loginButton = new JButton("Iniciar sesión");
 
         userLabel.setBounds(100, 200, 80, 25);
         userTextField.setBounds(180, 200, 200, 25);
@@ -43,20 +42,24 @@ public class LoginView extends JFrame{
         rightPanel.add(loginButton);
 
         JPanel leftPanel = new JPanel();
-        leftPanel.setBackground(Color.ORANGE);
+        leftPanel.setBackground(Color.blue);
 
         mainPanel.add(leftPanel);
         mainPanel.add(rightPanel);
 
         add(mainPanel);
+
+        setVisible(true);
     }
 
-    public String getEmail(){
+    public String getName(){
         return userTextField.getText();
     }
+
     public String getPassword() {
         return new String(passwordField.getPassword());
     }
+
     public void addLoginListener(ActionListener listener) {
         loginButton.addActionListener(listener);
     }
