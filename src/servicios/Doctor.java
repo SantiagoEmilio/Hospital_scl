@@ -1,7 +1,5 @@
 package servicios;
 
-import java.util.HashMap;
-
 public class Doctor {
     private String usuario;
     private String noDeDoctor;

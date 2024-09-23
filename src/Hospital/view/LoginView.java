@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-public class LoginView extends JFrame{
+public class LoginView extends JFrame {
     private JTextField userTextField;
     private JPasswordField passwordField;
     private JButton loginButton;
@@ -49,14 +49,14 @@ public class LoginView extends JFrame{
 
         add(mainPanel);
 
-        setVisible(true);
+        setVisible(true); // Mover aquí al final, si es posible
     }
 
-    public String getName(){
+    public String getUsuario() {
         return userTextField.getText();
     }
 
-    public String getPassword() {
+    public String getContrasenna() {
         return new String(passwordField.getPassword());
     }
 
@@ -64,5 +64,6 @@ public class LoginView extends JFrame{
         loginButton.addActionListener(listener);
     }
 }
+
 
 
