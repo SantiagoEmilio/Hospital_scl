@@ -4,10 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-public class LoginView extends JFrame{
+public class LoginView extends JFrame {
     private JTextField userTextField;
     private JPasswordField passwordField;
     private JButton loginButton;
+    private JPanel tasksPanel;
 
     public LoginView() {
         setTitle("Login selp");
@@ -18,6 +19,22 @@ public class LoginView extends JFrame{
         // Panel principal con GridLayout de 1 fila y 2 columnas
         JPanel mainPanel = new JPanel(new GridLayout(1, 2));
 
+        // Panel izquierdo para el menú de tareas
+        tasksPanel = new JPanel(new GridLayout(5, 1));
+        tasksPanel.setBackground(Color.LIGHT_GRAY);
+
+        // Crear botones de tareas
+        for (int i = 1; i <= 5; i++) {
+            JButton taskButton = new JButton("Tarea " + i);
+            tasksPanel.add(taskButton);
+        }
+
+        // Agregar el panel de tareas al panel izquierdo
+        JPanel leftPanel = new JPanel(new BorderLayout());
+        leftPanel.setBackground(Color.BLUE);
+        leftPanel.add(tasksPanel, BorderLayout.CENTER);
+
+        // Panel derecho para el formulario de inicio de sesión
         JPanel rightPanel = new JPanel();
         rightPanel.setBackground(Color.WHITE);
         rightPanel.setLayout(null); // Layout para posicionar manualmente los componentes
@@ -41,18 +58,15 @@ public class LoginView extends JFrame{
         rightPanel.add(passwordField);
         rightPanel.add(loginButton);
 
-        JPanel leftPanel = new JPanel();
-        leftPanel.setBackground(Color.blue);
-
+        // Agregar paneles al panel principal
         mainPanel.add(leftPanel);
         mainPanel.add(rightPanel);
 
         add(mainPanel);
-
         setVisible(true);
     }
 
-    public String getName(){
+    public String getName() {
         return userTextField.getText();
     }
 
@@ -64,5 +78,6 @@ public class LoginView extends JFrame{
         loginButton.addActionListener(listener);
     }
 }
+
 
 
