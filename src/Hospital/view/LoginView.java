@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-public class LoginView extends JFrame{
+public class LoginView extends JFrame {
     private JTextField userTextField;
     private JPasswordField passwordField;
     private JButton loginButton;
@@ -42,17 +42,16 @@ public class LoginView extends JFrame{
         rightPanel.add(loginButton);
 
         JPanel leftPanel = new JPanel();
-        leftPanel.setBackground(Color.blue);
+        leftPanel.setBackground(Color.BLUE);
 
         mainPanel.add(leftPanel);
         mainPanel.add(rightPanel);
 
         add(mainPanel);
-
         setVisible(true);
     }
 
-    public String getName(){
+    public String getUsername() {
         return userTextField.getText();
     }
 
@@ -60,9 +59,14 @@ public class LoginView extends JFrame{
         return new String(passwordField.getPassword());
     }
 
-    public void addLoginListener(ActionListener listener) {
+    public void addLoginButtonListener(ActionListener listener) {
         loginButton.addActionListener(listener);
     }
+
+    public void showError(String message) {
+        JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE);
+    }
 }
+
 
 

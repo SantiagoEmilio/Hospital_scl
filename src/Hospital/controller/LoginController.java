@@ -13,7 +13,7 @@ public class LoginController {
     public LoginController(LoginView loginView) {
         this.loginView = loginView;
         this.backEnde = new BackEnd(); // Inicializamos el servicio BackEnde
-        this.loginView.addLoginListener(e -> controlDelLogin());
+        this.loginView.addLoginButtonListener(iniciarsecion -> controlDelLogin());
     }
 
     public void controlDelLogin(){
@@ -30,5 +30,7 @@ public class LoginController {
             System.out.println("Número de Doctor: " + datosDoc.get("Usuario")); // Cambiado a "Usuario" según la implementación de BackEnd
             System.out.println("Especialidad: " + datosDoc.get("Especialidad"));
         }
+
+
     }
 }
